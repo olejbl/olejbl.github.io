@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+* {
+  margin: 0;
+}
+
+body {
+  top: 0;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  font-family: 'Roboto Slab', serif;
+}
+
+#holder {
+  min-height: 100%;
+  position: relative;
+}
+
+path {
+  fill: white;
+}
+
+footer {
+  background-color: #111111;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+#body {
+  margin: 0 auto;
+  padding: 200px 0 334px;
+  left: 0;
+  right: 0;
+}
+
+#main {
+  margin: 0 auto;
+  padding: 60px;
+  max-width: 880px;
+  background-color: white;
+  font-size: 25px;
+}
+
+#navbar {
+  z-index: 1;
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  background-color: #111111;
+  color: white;
+}
+
+#navbar ul {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+#navbar ul li {
+  transition: all 0.5s ease;
+  padding: 0 10px;
+  height: 100px;
+}
+
+#navbar ul li a {
+  transition: all 0.5s ease;
+  line-height: 100px;
+  white-space: nowrap;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+#navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+#navbar ul li img {
+  transition: all 0.5s ease;
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+}
+
+#navbar[class*="toggled"] {
+  top: 0;
+}
+
+#menu {
+  transition: all 0.2s ease;
+  z-index: 2;
+  position: fixed;
+  background-color: #111111;
+  width: 100vw;
+  pointer-events: none;
+}
+
+#menuButton {
+  float: right;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: none;
+  pointer-events: all;
+}
+
+#buttonTop {
+  transition: all 0.5s ease;
+  transform-origin: 50px 25px;
+}
+
+#buttonMid {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+#buttonBot {
+  transition: all 0.5s ease;
+  transform-origin: 50px 75px;
+}
+
+#menuButton[class*="toggled"] #buttonTop {
+  transform: translateY(25px) rotate(135deg);
+}
+
+#menuButton[class*="toggled"] #buttonMid {
+  opacity: 0;
+}
+
+#menuButton[class*="toggled"] #buttonBot {
+  transform: translateY(-25px) rotate(-135deg);
+}
+@media only screen and (max-width: 1024px) {
+  body {
+    background-image: none;
+  }
+
+  #main {
+    padding: 160px 60px 294px;
+    z-index: -1;
+    height: calc(100% - 100px - 160px);
+  }
+
+  #body {
+    padding: 0;
+  }
+
+  #navbar {
+    transition: all 0.5s ease;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: -100%;
+    background-color: rgba(6, 6, 8, 0.85);
+    color: white;
+    list-style: none;
+  }
+
+  #navbar ul {
+    transition: all 0s;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  #navbar ul li {
+    transition: all 0s;
+    flex-grow: 1;
+    text-align: center;
+    line-height: calc(100vh/4);
+    white-space: nowrap;
+    width: 100vw;
+  }
+
+  #navbar ul li a {
+    transition: all 0s;
+    font-size: 60px;
+  }
+
+  #navbar ul li:nth-child(3) {
+    transition: all 0s;
+    display: none;
+  }
+
+  #menu[class*="toggled"] {
+    background-color: transparent;
+  }
+
+  #menuButton {
+    display: block;
+  }
+}
