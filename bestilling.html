@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <title>Bestilling</title>
+    <meta charset="utf-8">
+    <link rel="Stylesheet" type="text/css" href="css/navbarfooterstyle.css">
+    <link rel="Stylesheet" type="text/css" href="css/style.css">
+    <link rel="Stylesheet" type="text/css" href="css/bestillingstyle.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#133567">
+    <link id="navbarImport" rel="import" href="navbar.html">
+    <link id="footerImport" rel="import" href="footer.html">
+  </head>
+  <body>
+    <div id="holder">
+      <div id="body">
+        <div id="main">
+          <h1>Burgerbestilling</h1>
+          <div id="side1">
+            <!-- Her velges brød -->
+            <p>Velg brød:</p>
+            <div class="menu">
+              <label for="fint">
+                <input id="fint" class="input" value="fint brød" type="radio" name="bun">
+                <img src="img/bestilling/fint.png" alt="Fint brød">
+              </label>
+              <label for="grovt">
+                <input id="grovt" class="input" value="grovt brød" type="radio" name="bun">
+                <img src="img/bestilling/grovt.png" alt="Grovt brød">
+              </label>
+            </div>
+            <br>
+            <!-- Her velges kjøtt -->
+            <p>Velg kjøtt:</p>
+            <div class="menu">
+              <label for="beef">
+                <input id="beef" class="input" value="biff" type="radio" name="meat">
+                <img src="img/bestilling/biff.png" alt="Biff">
+              </label>
+              <label for="kylling">
+                <input id="kylling" class="input" value="kylling" type="radio" name="meat">
+                <img src="img/bestilling/kylling.png" alt="Kylling">
+              </label>
+              <label for="fisk">
+                <input id="fisk" class="input" value="fisk" type="radio" name="meat">
+                <img src="img/bestilling/fisk.png" alt="Fisk">
+              </label>
+            </div>
+            <br>
+            <!-- Her velges saus -->
+            <p>Velg saus:</p>
+            <div class="menu">
+              <label for="ketchup">
+                <input id="ketchup" class="input" value="ketchup" type="checkbox" name="sauce">
+                <img src="img/bestilling/ketchup.png" alt="Ketchup">
+              </label>
+              <label for="mayo">
+                <input id="mayo" class="input" value="majones" type="checkbox" name="sauce">
+                <img src="img/bestilling/mayo.png" alt="Majones">
+              </label>
+              <label for="sennep">
+                <input id="sennep" class="input" value="sennep" type="checkbox" name="sauce">
+                <img src="img/bestilling/sennep.png" alt="Sennep">
+              </label>
+            </div>
+            <br>
+            <!-- Her velges grønnsaker -->
+            <p>Velg grønnsaker:</p>
+            <div class="menu">
+              <label for="salat">
+                <input id="salat" class="input" value="salat" type="checkbox" name="veg">
+                <img src="img/bestilling/salat.png" alt="Salat">
+              </label>
+              <label for="løk">
+                <input id="løk" class="input" value="løk" type="checkbox" name="veg">
+                <img src="img/bestilling/lok.png" alt="Løk">
+              </label>
+              <label for="sylteagurk">
+                <input id="sylteagurk" class="input" value="sylteagurk" type="checkbox" name="veg">
+                <img src="img/bestilling/pickles.png" alt="Sylteagurk">
+              </label>
+            </div>
+            <br>
+            <input class="pageButtons" type="button" id="nextButton" value="Neste">
+          </div>
+          <div id="side2">
+            <div id="kontaktinfo">
+              <p>Navn:</p>
+              <input type="text" id="navn"><br><br>
+              <p>Telefonnummer:</p>
+              <input type="number" id="tlf">
+            </div>
+            <br>
+            <input class="pageButtons" type="button" id="previousButton" value="Tilbake">
+            <input type="button" id="submitButton" value="Send bestilling">
+          </div>
+        </div>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div id="close"></div>
+            <div id="divModal"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/bestilling.js"></script>
+  </body>
+</html>

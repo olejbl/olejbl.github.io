@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@font-face {
+    font-family: 'the_historia_demoregular';
+    src: url('../fonts/thehistoria-webfont.woff2') format('woff2'),
+         url('../fonts/thehistoria-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+}
+.title{
+  font-family:the_historia_demoregular;
+  padding: 20px;
+  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  font-size: 70px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+path {
+  fill: #FFFFFF;
+}
+
+.text p {
+  line-height: 2.0;
+}
+
+.bg {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.bg1 {
+  background-image: url("../img/forside_bilde_1.jpg");
+  min-height: 100%;
+}
+
+.bg2 {
+  background-image: url("../img/forside_bilde_2.jpg");
+  min-height: 600px;
+}
+
+.bg3 {
+  background-image: url("../img/forside_bilde_3.jpg");
+  min-height: 600px;
+}
+
+.text {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 50px 80px;
+}
+
+.text h3 {
+  letter-spacing: 5px;
+  text-align: center;
+}
+@media only screen and (max-width: 1024px) {
+  .bg {
+    background-attachment: scroll;
+  }
+
+  .bg1 {
+    min-height: 600px;
+  }
+}

@@ -1,0 +1,46 @@
+label > input {
+  display: none;
+}
+
+label > input + img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  border: 5px solid transparent;
+}
+
+label > input:checked + img {
+  border: 5px solid #f00;
+  border-style: inset;
+}
+
+label:hover img {
+  border: 5px solid grey;
+  border-style: inset;
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu label {
+  display: inline-block;
+}
+
+#nextButton,
+#submitButton {
+  float: right;
+}
+
+#previousButton {
+  float: left;
+}
+
+#side2 {
+  display: none;
+}
+
+.modal-content {
+  width: 60%;
+  padding: 40px;
+}

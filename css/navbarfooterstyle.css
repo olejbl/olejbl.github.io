@@ -1,0 +1,202 @@
+#navbar {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  background-color: #111111;
+  color: white;
+}
+
+#navbar ul {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: justify;
+  list-style: none;
+  margin-bottom: -20px;
+}
+
+#navbar ul::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+#navbar ul li {
+  display: inline-block;
+  transition: all 0.5s ease;
+  padding: 0 10px;
+}
+
+#navbar ul li a {
+  transition: all 0.5s ease;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+#navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+#navbar ul li img {
+  margin: 0;
+  vertical-align: middle;
+  transition: all 0.5s ease;
+  height: 140px;
+  width: 140px;
+  padding: 20px;
+}
+
+#navbar[class*="small"] ul li a {
+  font-size: 20px;
+}
+
+#navbar[class*="small"] ul li img {
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+}
+
+#navbar[class*="toggled"] {
+  top: 0;
+}
+
+#menu {
+  transition: all 0.2s ease;
+  z-index: 1;
+  position: fixed;
+  background-color: #111111;
+  width: 100vw;
+  pointer-events: none;
+}
+
+#menu img {
+  display: none;
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+
+#menuButton {
+  float: right;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: none;
+  pointer-events: all;
+}
+
+#buttonTop {
+  transition: all 0.5s ease;
+  transform-origin: 50px 25px;
+}
+
+#buttonMid {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+#buttonBot {
+  transition: all 0.5s ease;
+  transform-origin: 50px 75px;
+}
+
+#menuButton[class*="toggled"] #buttonTop {
+  transform: translateY(25px) rotate(135deg);
+}
+
+#menuButton[class*="toggled"] #buttonMid {
+  opacity: 0;
+}
+
+footer {
+  background-color: #111111;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+footer > div {
+  text-align: justify;
+  color: white;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0 20px;
+}
+
+footer > div::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+footer > div > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer > div p {
+  margin: 0 auto;
+}
+
+#menuButton[class*="toggled"] #buttonBot {
+  transform: translateY(-25px) rotate(-135deg);
+}
+@media only screen and (max-width: 1024px) {
+  #navbar {
+    z-index: 1;
+    transition: all 0.5s ease;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: -100%;
+    background-color: rgba(6, 6, 8, 0.85);
+    color: white;
+    list-style: none;
+  }
+
+  #navbar ul {
+    transition: all 0s;
+    list-style: none;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  #navbar ul li {
+    height: calc(100vh / 4);
+    line-height: calc(100vh / 4);
+    padding: 0;
+    transition: all 0s;
+    text-align: center;
+    width: 100vw;
+  }
+
+  #navbar ul li a {
+    transition: all 0s;
+    font-size: 50px;
+  }
+
+  #navbar ul li:nth-child(3) {
+    display: none;
+  }
+
+  #navbar[class*="small"] ul li a {
+    font-size: 50px;
+  }
+
+  #menu {
+    z-index: 2;
+  }
+
+  #menu[class*="toggled"] {
+    background-color: transparent;
+  }
+
+  #menu img,
+  #menuButton {
+    display: block;
+    z-index: 3;
+  }
+}

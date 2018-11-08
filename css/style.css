@@ -24,23 +24,6 @@ path {
   fill: white;
 }
 
-footer {
-  background-color: #111111;
-  width: 100vw;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-footer div {
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 40px 0;
-}
-
 #body {
   margin: 0 auto;
   padding: 200px 0 334px;
@@ -54,99 +37,59 @@ footer div {
   max-width: 880px;
   background-color: white;
   font-size: 25px;
+  overflow: hidden;
 }
 
-#navbar {
-  z-index: 1;
-  top: 0;
-  position: fixed;
-  width: 100vw;
-  background-color: #111111;
-  color: white;
-}
-
-#navbar ul {
-  width: 1000px;
-  margin: 0 auto;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-}
-
-#navbar ul li {
-  transition: all 0.5s ease;
-  padding: 0 10px;
-  height: 100px;
-}
-
-#navbar ul li a {
-  transition: all 0.5s ease;
-  line-height: 100px;
-  white-space: nowrap;
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
-}
-
-#navbar ul li a:hover {
-  text-decoration: underline;
-}
-
-#navbar ul li img {
-  transition: all 0.5s ease;
-  width: 60px;
-  height: 60px;
-  padding: 20px;
-}
-
-#navbar[class*="toggled"] {
-  top: 0;
-}
-
-#menu {
-  transition: all 0.2s ease;
-  z-index: 2;
-  position: fixed;
-  background-color: #111111;
-  width: 100vw;
-  pointer-events: none;
-}
-
-#menuButton {
-  float: right;
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
+.modal {
   display: none;
-  pointer-events: all;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
 }
 
-#buttonTop {
-  transition: all 0.5s ease;
-  transform-origin: 50px 25px;
+.modal-content {
+  overflow: hidden;
+  background-color: #fefefe;
+  margin: 130px auto;
+  border: 1px solid #888;
 }
 
-#buttonMid {
-  transition: all 0.3s ease;
-  opacity: 1;
+#close {
+  margin: 0 0 10px;
+  width: 30px;
+  height: 30px;
+  float: right;
+  background-image: url("../img/close.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-#buttonBot {
-  transition: all 0.5s ease;
-  transform-origin: 50px 75px;
+#close:hover {
+  cursor: pointer;
 }
 
-#menuButton[class*="toggled"] #buttonTop {
-  transform: translateY(25px) rotate(135deg);
+#divModal {
+  margin: 40px 0 0;
+  font-size: 30px;
 }
 
-#menuButton[class*="toggled"] #buttonMid {
-  opacity: 0;
+#divModal img {
+  width: 100%;
 }
 
-#menuButton[class*="toggled"] #buttonBot {
-  transform: translateY(-25px) rotate(-135deg);
+input[type*="button"] {
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #111111;
+  color: white;
+  border: none;
+  font-size: 20px;
 }
 @media only screen and (max-width: 1024px) {
   body {
@@ -161,53 +104,5 @@ footer div {
 
   #body {
     padding: 0;
-  }
-
-  #navbar {
-    transition: all 0.5s ease;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: -100%;
-    background-color: rgba(6, 6, 8, 0.85);
-    color: white;
-    list-style: none;
-  }
-
-  #navbar ul {
-    transition: all 0s;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  #navbar ul li {
-    transition: all 0s;
-    flex-grow: 1;
-    text-align: center;
-    line-height: calc(100vh/4);
-    white-space: nowrap;
-    width: 100vw;
-  }
-
-  #navbar ul li a {
-    transition: all 0s;
-    font-size: 60px;
-  }
-
-  #navbar ul li:nth-child(3) {
-    transition: all 0s;
-    display: none;
-  }
-
-  #menu[class*="toggled"] {
-    background-color: transparent;
-  }
-
-  #menuButton {
-    display: block;
   }
 }

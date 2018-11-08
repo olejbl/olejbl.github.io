@@ -1,0 +1,11 @@
+textarea {
+  width: 880px;
+  height: 200px;
+  resize: none;
+  font-family: 'Roboto Slab', serif;
+}
+
+.modal-content {
+  width: 60%;
+  padding: 40px;
+}
