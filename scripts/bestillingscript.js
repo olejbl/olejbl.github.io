@@ -7,6 +7,7 @@ let side2Element = document.getElementById("side2");
 let pageButtonsList = document.getElementsByClassName("pageButtons");
 let navnElement = document.getElementById("navn");
 let tlfElement = document.getElementById("tlf");
+navnElement.onkeyup = erstattTegn;
 //legger til lyttere på neste/tilbake knappene
 for (var i = 0; i < pageButtonsList.length; i++) {
   pageButtonsList[i].addEventListener("click", changePage)
@@ -25,10 +26,17 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+//erstattTegn erstatter tegn som blir skrevet inn i navnElement som ikke hører til det norske alfabetet
+function erstattTegn() {
+  navnElement.value = navnElement.value.replace(/[^a-zA-ZæøåÆØÅ]+/, '');
+}
 //submitOrder() alerter brukeren hvis tlf ikke er gyldig eller brukeren ikke oppgir navn
 function submitOrder() {
-  if (tlfElement.value.toString().length != 8 || navnElement.value == "") {
-    alert("Du må fylle ut gyldig kontaktinformasjon")
+  if (navnElement.value == "") {
+    alert("Du må oppgi et gyldig navn.")
+  }
+  else if (tlfElement.value.toString().length != 8) {
+    alert("Du må oppgi et gyldig telefonnummer.")
   }
   else {
     let outputText = "";
